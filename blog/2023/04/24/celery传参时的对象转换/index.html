@@ -6,17 +6,17 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="drf外键序列化">
+        <meta name="description" content="celery传参时的对象转换">
       
       
       
-        <link rel="canonical" href="https://jvvyou.github.io/blog/2023/06/09/drf%E5%A4%96%E9%94%AE%E5%BA%8F%E5%88%97%E5%8C%96/">
+        <link rel="canonical" href="https://jvvyou.github.io/blog/2023/04/24/celery%E4%BC%A0%E5%8F%82%E6%97%B6%E7%9A%84%E5%AF%B9%E8%B1%A1%E8%BD%AC%E6%8D%A2/">
       
       
-        <link rel="prev" href="../../../04/24/celery%E4%BC%A0%E5%8F%82%E6%97%B6%E7%9A%84%E5%AF%B9%E8%B1%A1%E8%BD%AC%E6%8D%A2/">
+        <link rel="prev" href="../../../03/21/pushGateWay%20%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/">
       
       
-        <link rel="next" href="../../11/%E5%B1%9E%E6%80%A7%E3%80%81property%E5%92%8C%E5%B1%9E%E6%80%A7%E6%8F%8F%E8%BF%B0%E7%AC%A6/">
+        <link rel="next" href="../../../06/09/drf%E5%A4%96%E9%94%AE%E5%BA%8F%E5%88%97%E5%8C%96/">
       
       
       <link rel="icon" href="../../../../../assets/img/1722268139372.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>drf外键序列化 - JvvYou</title>
+        <title>celery传参时的对象转换 - JvvYou</title>
       
     
     
@@ -71,11 +71,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="drf外键序列化 - JvvYou" >
+        <meta  property="og:title"  content="celery传参时的对象转换 - JvvYou" >
       
-        <meta  property="og:description"  content="drf外键序列化" >
+        <meta  property="og:description"  content="celery传参时的对象转换" >
       
-        <meta  property="og:image"  content="https://jvvyou.github.io/assets/images/social/blog/posts/devops/drf外键序列化.png" >
+        <meta  property="og:image"  content="https://jvvyou.github.io/assets/images/social/blog/posts/devops/celery传参时的对象转换.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -83,15 +83,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://jvvyou.github.io/blog/2023/06/09/drf%E5%A4%96%E9%94%AE%E5%BA%8F%E5%88%97%E5%8C%96/" >
+        <meta  property="og:url"  content="https://jvvyou.github.io/blog/2023/04/24/celery%E4%BC%A0%E5%8F%82%E6%97%B6%E7%9A%84%E5%AF%B9%E8%B1%A1%E8%BD%AC%E6%8D%A2/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="drf外键序列化 - JvvYou" >
+        <meta  name="twitter:title"  content="celery传参时的对象转换 - JvvYou" >
       
-        <meta  name="twitter:description"  content="drf外键序列化" >
+        <meta  name="twitter:description"  content="celery传参时的对象转换" >
       
-        <meta  name="twitter:image"  content="https://jvvyou.github.io/assets/images/social/blog/posts/devops/drf外键序列化.png" >
+        <meta  name="twitter:image"  content="https://jvvyou.github.io/assets/images/social/blog/posts/devops/celery传参时的对象转换.png" >
       
     
     
@@ -153,7 +153,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              drf外键序列化
+              celery传参时的对象转换
             
           </span>
         </div>
@@ -772,18 +772,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#1json" class="md-nav__link">
     <span class="md-ellipsis">
-      1、模型感受一下：
+      1、对象转换json
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#2json" class="md-nav__link">
     <span class="md-ellipsis">
-      2、序列化
+      2、json转成对象
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3、这是调用异步
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4__dict__-magic" class="md-nav__link">
+    <span class="md-ellipsis">
+      4、扩展一下__dict__ （magic方法）
     </span>
   </a>
   
@@ -845,14 +863,14 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2023-06-09 00:00:00" class="md-ellipsis">2023年6月9日星期五</time>
+                        <time datetime="2023-04-24 00:00:00" class="md-ellipsis">2023年4月24日星期一</time>
                       </div>
                     </li>
                     
                       <li class="md-nav__item">
                         <div class="md-nav__link">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 13h1.5v2.82l2.44 1.41-.75 1.3L15 16.69V13m4-5H5v11h4.67c-.43-.91-.67-1.93-.67-3a7 7 0 0 1 7-7c1.07 0 2.09.24 3 .67V8M5 21a2 2 0 0 1-2-2V5c0-1.11.89-2 2-2h1V1h2v2h8V1h2v2h1a2 2 0 0 1 2 2v6.1c1.24 1.26 2 2.99 2 4.9a7 7 0 0 1-7 7c-1.91 0-3.64-.76-4.9-2H5m11-9.85A4.85 4.85 0 0 0 11.15 16c0 2.68 2.17 4.85 4.85 4.85A4.85 4.85 0 0 0 20.85 16c0-2.68-2.17-4.85-4.85-4.85Z"/></svg>
-                          <time datetime="2023-06-09 00:00:00" class="md-ellipsis">2023年6月9日星期五</time>
+                          <time datetime="2023-04-24 00:00:00" class="md-ellipsis">2023年4月24日星期一</time>
                         </div>
                       </li>
                     
@@ -900,60 +918,76 @@
     
     
     
+      <span class="md-tag">python</span>
+    
+  
+    
+    
+    
       <span class="md-tag">django</span>
     
   
     
     
     
-      <span class="md-tag">drf</span>
+      <span class="md-tag">celery</span>
     
   
 </nav>
 
 
 
-<p>drf外键序列化</p>
+<p>celery传参时的对象转换</p>
 <!-- more -->
 
 <h1 id="_1">前言</h1>
-<p>在Django REST Framework（DRF）中，外键字段可以通过序列化器进行序列化和反序列化。</p>
-<h2 id="1">1、模型感受一下：</h2>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">class</span> <span class="nc">Author</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="k">class</span> <span class="nc">Book</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="n">author</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Author</span><span class="p">,</span> <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">)</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">title</span>
-</span></code></pre></div>
-<h2 id="2">2、序列化</h2>
-<p>在上面的示例中，Book模型有一个外键字段指向Author模型。在BookSerializer中，我们可以使用source参数来指定外键字段对应的关联模型中的字段。例如，在这个例子中，我们使用source='author.name'将作者名字的字段映射到author_name字段。</p>
-<p>在AuthorSerializer中，我们包含了一个嵌套的BookSerializer，以便序列化与该作者相关联的所有书籍。
-<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">rest_framework</span> <span class="kn">import</span> <span class="n">serializers</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span> <span class="nn">myapp.models</span> <span class="kn">import</span> <span class="n">Author</span><span class="p">,</span> <span class="n">Book</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">class</span> <span class="nc">BookSerializer</span><span class="p">(</span><span class="n">serializers</span><span class="o">.</span><span class="n">ModelSerializer</span><span class="p">):</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="n">author_name</span> <span class="o">=</span> <span class="n">serializers</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="s1">&#39;author.name&#39;</span><span class="p">)</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        <span class="n">model</span> <span class="o">=</span> <span class="n">Book</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>        <span class="n">fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;author_name&#39;</span><span class="p">]</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="k">class</span> <span class="nc">AuthorSerializer</span><span class="p">(</span><span class="n">serializers</span><span class="o">.</span><span class="n">ModelSerializer</span><span class="p">):</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    <span class="n">books</span> <span class="o">=</span> <span class="n">BookSerializer</span><span class="p">(</span><span class="n">many</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>        <span class="n">model</span> <span class="o">=</span> <span class="n">Author</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>        <span class="n">fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;books&#39;</span><span class="p">]</span>
+<p>遇到一个有趣的问题，celery delay传入SSH的对象时，报错Object of type SSH is not JSON serializable，分析一下就是只能传json的数据。把所有传入的数据都转成json。</p>
+<h2 id="1json">1、对象转换json</h2>
+<p>因为我传递的是 <mark>对象</mark> ，所以要把对象转成 <mark>json</mark>，所以我就自定义了一个JSONEncoder
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">class</span> <span class="nc">MyEncoder</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">JSONEncoder</span><span class="p">):</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="k">def</span> <span class="nf">default</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">SSH</span><span class="p">):</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>            <span class="n">obj</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s1">&#39;arguments&#39;</span><span class="p">][</span><span class="s1">&#39;pkey&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>            <span class="k">return</span> <span class="n">obj</span><span class="o">.</span><span class="vm">__dict__</span>
 </span></code></pre></div></p>
+<h2 id="2json">2、json转成对象</h2>
+<p>在异步任务里面又将json转成对象
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nd">@app</span><span class="o">.</span><span class="n">task</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;receive_execute_command&#39;</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="n">CustomTask</span><span class="p">)</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">def</span> <span class="nf">execute_remote_command</span><span class="p">(</span><span class="n">client</span><span class="p">:</span> <span class="n">json</span><span class="p">,</span> <span class="n">scripts</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="sd">    异步执行远程脚本</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="sd">    :param client:</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="sd">    :param scripts:</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="sd">    :return:</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="n">client_json_to_dict</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">client</span><span class="p">)</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="n">client_json_to_dict</span><span class="p">[</span><span class="s1">&#39;arguments&#39;</span><span class="p">][</span><span class="s1">&#39;pkey&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">SSH</span><span class="o">.</span><span class="n">get_private_key</span><span class="p">()</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    <span class="n">new_client_obj</span> <span class="o">=</span> <span class="n">SSH</span><span class="p">(</span><span class="n">hostname</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    <span class="n">new_client_obj</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">=</span> <span class="n">client_json_to_dict</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>    <span class="n">res</span> <span class="o">=</span> <span class="n">new_client_obj</span><span class="o">.</span><span class="n">exec_command</span><span class="p">(</span><span class="n">scripts</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    <span class="k">return</span> <span class="n">res</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+</span></code></pre></div></p>
+<h2 id="3">3、这是调用异步</h2>
+<p><div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>        <span class="k">elif</span> <span class="n">is_async</span><span class="p">:</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>            <span class="n">client_to_json</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">client</span><span class="p">,</span> <span class="bp">cls</span><span class="o">=</span><span class="n">MyEncoder</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>            <span class="n">execute_remote_command</span><span class="o">.</span><span class="n">delay</span><span class="p">(</span><span class="n">client_to_json</span><span class="p">,</span> <span class="n">scripts</span><span class="p">)</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>            <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="s1">&#39;异步执行中。&#39;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)]</span>
+</span></code></pre></div>
+结论就是celery的形参不能是对象。</p>
+<h2 id="4__dict__-magic">4、扩展一下__dict__ （magic方法）</h2>
+<p>为了方便用户查看类中包含哪些属性，Python 类提供了 <strong>dict</strong> 属性。需要注意的一点是，该属性可以用类名或者类的实例对象来调用：</p>
+<ul>
+<li>
+<p>用类名直接调用 <strong>dict</strong>，会输出该由类中所有类属性组成的字典；</p>
+</li>
+<li>
+<p>而使用类的实例对象调用 <strong>dict</strong>，会输出由类中所有实例属性组成的字典。</p>
+</li>
+</ul>
+<p>对于具有继承关系的父类和子类来说，父类有自己的 <strong>dict</strong>，同样子类也有自己的 <strong>dict</strong>，它不会包含父类的 <strong>dict</strong>。</p>
+<p>可以参考：http://c.biancheng.net/view/2374.html</p>
 <p><br/>
 <br/></p>
 <figure>
@@ -1059,7 +1093,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../../../04/24/celery%E4%BC%A0%E5%8F%82%E6%97%B6%E7%9A%84%E5%AF%B9%E8%B1%A1%E8%BD%AC%E6%8D%A2/" class="md-footer__link md-footer__link--prev" aria-label="上一页: celery传参时的对象转换">
+          <a href="../../../03/21/pushGateWay%20%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/" class="md-footer__link md-footer__link--prev" aria-label="上一页: pushGateWay 遇到的一些问题">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1069,20 +1103,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                celery传参时的对象转换
+                pushGateWay 遇到的一些问题
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../11/%E5%B1%9E%E6%80%A7%E3%80%81property%E5%92%8C%E5%B1%9E%E6%80%A7%E6%8F%8F%E8%BF%B0%E7%AC%A6/" class="md-footer__link md-footer__link--next" aria-label="下一页: 属性、property和属性描述符">
+          <a href="../../../06/09/drf%E5%A4%96%E9%94%AE%E5%BA%8F%E5%88%97%E5%8C%96/" class="md-footer__link md-footer__link--next" aria-label="下一页: drf外键序列化">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                属性、property和属性描述符
+                drf外键序列化
               </div>
             </div>
             <div class="md-footer__button md-icon">
