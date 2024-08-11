@@ -81,6 +81,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://jvvyou.github.io/blog/2023/02/21/%E7%9B%91%E6%8E%A7win10%E7%A8%8B%E5%BA%8F/</loc>
+         <lastmod>2024-08-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://jvvyou.github.io/blog/2023/10/24/k8s%20kubeadm%E6%89%A9%E5%AE%B9%E6%8C%87%E5%AE%9A%E7%89%88%E6%9C%AC%E8%8A%82%E7%82%B9/</loc>
          <lastmod>2024-08-11</lastmod>
          <changefreq>daily</changefreq>
@@ -107,6 +112,11 @@
     </url>
     <url>
          <loc>https://jvvyou.github.io/blog/2024/01/16/crontab%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</loc>
+         <lastmod>2024-08-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jvvyou.github.io/blog/2023/02/23/supervisor%E5%90%AF%E5%8A%A8%E4%BA%A7%E7%94%9F%E5%A4%9A%E4%B8%AA%E8%BF%9B%E7%A8%8B/</loc>
          <lastmod>2024-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -152,6 +162,11 @@
     </url>
     <url>
          <loc>https://jvvyou.github.io/blog/page/2/</loc>
+         <lastmod>2024-08-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jvvyou.github.io/blog/page/3/</loc>
          <lastmod>2024-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>

@@ -777,6 +777,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#supervisor" class="md-nav__link">
+    <span class="md-ellipsis">
+      supervisor启动产生多个进程
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -840,6 +849,15 @@
   <a href="#system-is-booting-up-see-pam_nologin8" class="md-nav__link">
     <span class="md-ellipsis">
       System is booting up. See pam_nologin(8)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supervisor" class="md-nav__link">
+    <span class="md-ellipsis">
+      supervisor启动产生多个进程
     </span>
   </a>
   
@@ -948,6 +966,54 @@
     
       <nav class="md-post__action">
         <a href="../../2023/07/04/See%20pam_nologin%288%29/">
+          继续阅读
+        </a>
+      </nav>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="../../img/person/353251710663168_.pic_hd.jpg" alt="jvvyou">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2023-02-23 00:00:00">2023年2月23日星期四</time></li>
+        
+          <li class="md-meta__item">
+            分类于
+            
+              <a href="./" class="md-meta__link">sys</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              需要 1 分钟阅读时间
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="supervisor"><a class="toclink" href="../../2023/02/23/supervisor%E5%90%AF%E5%8A%A8%E4%BA%A7%E7%94%9F%E5%A4%9A%E4%B8%AA%E8%BF%9B%E7%A8%8B/">supervisor启动产生多个进程</a></h2>
+<p>翌日线上es频繁报警，说某一时间段请求数量与前几日相比有上升，遂去服务器上查看请求，发现并没有什么特别大的量，然后对比入口网关的请求日志，一个reques id 出现了3次，如此有趣的事情必探查一番。</p>
+<p>发现一台机器上的filebeat启动了3个进程。。。导致一条日志上传了3次。filebeat是通过supervisor来进行管理，理论上不会有问题。</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2023/02/23/supervisor%E5%90%AF%E5%8A%A8%E4%BA%A7%E7%94%9F%E5%A4%9A%E4%B8%AA%E8%BF%9B%E7%A8%8B/">
           继续阅读
         </a>
       </nav>
