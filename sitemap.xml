@@ -86,6 +86,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://jvvyou.github.io/blog/2024/07/31/k8s1.30.2%E5%A0%86%E5%8F%A0%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2/</loc>
+         <lastmod>2024-08-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://jvvyou.github.io/blog/2023/10/24/k8s%20kubeadm%E6%89%A9%E5%AE%B9%E6%8C%87%E5%AE%9A%E7%89%88%E6%9C%AC%E8%8A%82%E7%82%B9/</loc>
          <lastmod>2024-08-11</lastmod>
          <changefreq>daily</changefreq>
@@ -141,6 +146,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://jvvyou.github.io/blog/category/k8s/</loc>
+         <lastmod>2024-08-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://jvvyou.github.io/blog/category/database/</loc>
          <lastmod>2024-08-11</lastmod>
          <changefreq>daily</changefreq>
@@ -152,11 +162,6 @@
     </url>
     <url>
          <loc>https://jvvyou.github.io/blog/category/sys/</loc>
-         <lastmod>2024-08-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://jvvyou.github.io/blog/category/k8s/</loc>
          <lastmod>2024-08-11</lastmod>
          <changefreq>daily</changefreq>
     </url>

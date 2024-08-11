@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="流畅的python">
+      
       
       
         <link rel="canonical" href="https://jvvyou.github.io/note/%E6%B5%81%E7%95%85%E7%9A%84python%E7%AC%94%E8%AE%B0/">
@@ -20,7 +22,7 @@
     
     
       
-        <title>流畅的python笔记 - JvvYou</title>
+        <title>流畅的python - JvvYou</title>
       
     
     
@@ -67,9 +69,9 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="流畅的python笔记 - JvvYou" >
+        <meta  property="og:title"  content="流畅的python - JvvYou" >
       
-        <meta  property="og:description"  content="None" >
+        <meta  property="og:description"  content="流畅的python" >
       
         <meta  property="og:image"  content="https://jvvyou.github.io/assets/images/social/note/流畅的python笔记.png" >
       
@@ -83,9 +85,9 @@
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="流畅的python笔记 - JvvYou" >
+        <meta  name="twitter:title"  content="流畅的python - JvvYou" >
       
-        <meta  name="twitter:description"  content="None" >
+        <meta  name="twitter:description"  content="流畅的python" >
       
         <meta  name="twitter:image"  content="https://jvvyou.github.io/assets/images/social/note/流畅的python笔记.png" >
       
@@ -149,7 +151,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              流畅的python笔记
+              流畅的python
             
           </span>
         </div>
@@ -817,7 +819,7 @@
           
   
   <span class="md-ellipsis">
-    流畅的python笔记
+    流畅的python
   </span>
   
 
@@ -828,7 +830,7 @@
         
   
   <span class="md-ellipsis">
-    流畅的python笔记
+    流畅的python
   </span>
   
 
@@ -1922,10 +1924,13 @@ Hack: check whether the content contains a h1 headline. If it doesn't, the
 page title (or respectively site name) is used as the main headline.
 -->
 
-<h1>流畅的python笔记</h1>
+<h1>流畅的python</h1>
 
 
 <!-- Page content -->
+<p>看书时觉得需要的就记录了下来。</p>
+<!-- more -->
+
 <h3 id="1">1、数据模型</h3>
 <h4 id="11">1.1、展示魔术方法</h4>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="mi">1</span><span class="err">、</span><span class="n">本例功能</span><span class="err">：</span><span class="n">通过例子展示__getitem__和__len__两个特殊方法</span><span class="err">。</span>
@@ -3553,6 +3558,12 @@ nonlocal</p>
 <p>描述符实例：验证属性
 特性工厂函数借助函数式编程模式，避免重复编写读值方法和设值方法。</p>
 <p>描述符的用法是，创建一个实例作为另一个类的类属性</p>
+<p><br/>
+<br/></p>
+<figure>
+<figcaption>觉得有用的老铁们可以"微信"赞助一杯82年的雪碧呦。</figcaption>
+<img alt="txtddd" src="../../blog/img/person/WechatIMG36353.jpg" width="300" /> 
+</figure>
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <div style="text-align: center" >
   <font size="2" color="grey" >本文阅读量&nbsp;<span id="busuanzi_value_page_pv"></span>&nbsp;次</font>
@@ -3578,6 +3589,61 @@ nonlocal</p>
 
 
 <!-- Comment system -->
+
+  <h2 id="__comments">评论</h2>
+  <!-- Insert generated snippet here -->
+<script
+  src="https://giscus.app/client.js"
+  data-repo="JvvYou/jvvyou.github.io"
+  data-repo-id="R_kgDOMfCHJg"
+  data-category="Announcements"
+  data-category-id="DIC_kwDOMfCHJs4ChY4E"
+  data-mapping="title"
+  data-input-position="top"
+  data-reactions-enabled="1"
+  data-emit-metadata="1"
+  data-theme="light"
+  data-lang="zh-CN"
+  crossorigin="anonymous"
+  async
+>
+</script>
+
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
 
                 
               </article>
