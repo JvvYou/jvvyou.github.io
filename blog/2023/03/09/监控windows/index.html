@@ -101,7 +101,16 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6676480188236347"
      crossorigin="anonymous"></script>
 
-  </head>
+   <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -1221,7 +1230,7 @@ page title (or respectively site name) is used as the main headline.
 <p>通过ansible批量操作windows机器。</p>
 <h3 id="1_1">1、登录名</h3>
 <p>ansible登录用户名必须与系统组记录的成员名一致，要不然会一直报错，"ntlm: the specified credentials were rejected by the server"
-<img alt="image" src="../../../../img/20230309/image.png" /></p>
+<a class="glightbox" href="../../../../img/20230309/image.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="../../../../img/20230309/image.png" /></a></p>
 <h3 id="2">2、检查网络状态是否是专有网络</h3>
 <h3 id="3windowspowershell">3、在被控windows电脑中，通过管理员方式打开powershell，执行如下</h3>
 <div class="language-powershell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">winrm</span> <span class="n">quickconfig</span>
@@ -1493,7 +1502,7 @@ page title (or respectively site name) is used as the main headline.
 <br/></p>
 <figure>
 <figcaption>觉得有用的老铁们可以"微信"赞助一杯82年的雪碧呦。</figcaption>
-<img alt="txtddd" src="../../../../img/person/WechatIMG36353.jpg" width="300" /> 
+<a class="glightbox" href="../../../../img/person/WechatIMG36353.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="txtddd" src="../../../../img/person/WechatIMG36353.jpg" width="300" /></a> 
 </figure>
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <div style="text-align: center" >
@@ -1681,5 +1690,7 @@ page title (or respectively site name) is used as the main headline.
       <script src="../../../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

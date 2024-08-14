@@ -6,17 +6,15 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="属性、property和属性描述符">
+        <meta name="description" content="从故障自愈系统变成运维系统">
       
       
       
-        <link rel="canonical" href="https://jvvyou.github.io/blog/2023/06/11/%E5%B1%9E%E6%80%A7%E3%80%81property%E5%92%8C%E5%B1%9E%E6%80%A7%E6%8F%8F%E8%BF%B0%E7%AC%A6/">
+        <link rel="canonical" href="https://jvvyou.github.io/blog/2024/08/13/%E4%BB%8E%E6%95%85%E9%9A%9C%E8%87%AA%E6%84%88%E7%B3%BB%E7%BB%9F%E5%8F%98%E6%88%90%E8%BF%90%E7%BB%B4%E7%B3%BB%E7%BB%9F/">
       
       
-        <link rel="prev" href="../../09/drf%E5%A4%96%E9%94%AE%E5%BA%8F%E5%88%97%E5%8C%96/">
+        <link rel="prev" href="../../05/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9D%83%E9%99%90%E6%A0%A1%E9%AA%8C/">
       
-      
-        <link rel="next" href="../../20/django%20orm%20NoneType%20object%20is%20not%20iterable/">
       
       
       <link rel="icon" href="../../../../../assets/img/1722268139372.png">
@@ -24,7 +22,7 @@
     
     
       
-        <title>属性、property和属性描述符 - JvvYou</title>
+        <title>从故障自愈系统变成运维系统 - JvvYou</title>
       
     
     
@@ -71,11 +69,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="属性、property和属性描述符 - JvvYou" >
+        <meta  property="og:title"  content="从故障自愈系统变成运维系统 - JvvYou" >
       
-        <meta  property="og:description"  content="属性、property和属性描述符" >
+        <meta  property="og:description"  content="从故障自愈系统变成运维系统" >
       
-        <meta  property="og:image"  content="https://jvvyou.github.io/assets/images/social/blog/posts/devops/属性、property和属性描述符.png" >
+        <meta  property="og:image"  content="https://jvvyou.github.io/assets/images/social/blog/posts/devops/故障自愈+运维系统.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -83,15 +81,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://jvvyou.github.io/blog/2023/06/11/%E5%B1%9E%E6%80%A7%E3%80%81property%E5%92%8C%E5%B1%9E%E6%80%A7%E6%8F%8F%E8%BF%B0%E7%AC%A6/" >
+        <meta  property="og:url"  content="https://jvvyou.github.io/blog/2024/08/13/%E4%BB%8E%E6%95%85%E9%9A%9C%E8%87%AA%E6%84%88%E7%B3%BB%E7%BB%9F%E5%8F%98%E6%88%90%E8%BF%90%E7%BB%B4%E7%B3%BB%E7%BB%9F/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="属性、property和属性描述符 - JvvYou" >
+        <meta  name="twitter:title"  content="从故障自愈系统变成运维系统 - JvvYou" >
       
-        <meta  name="twitter:description"  content="属性、property和属性描述符" >
+        <meta  name="twitter:description"  content="从故障自愈系统变成运维系统" >
       
-        <meta  name="twitter:image"  content="https://jvvyou.github.io/assets/images/social/blog/posts/devops/属性、property和属性描述符.png" >
+        <meta  name="twitter:image"  content="https://jvvyou.github.io/assets/images/social/blog/posts/devops/故障自愈+运维系统.png" >
       
     
     
@@ -129,7 +127,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -162,7 +160,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              属性、property和属性描述符
+              从故障自愈系统变成运维系统
             
           </span>
         </div>
@@ -861,6 +859,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -871,34 +871,208 @@
         <li class="md-nav__item">
   <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
-      1、实例属性和类属性的区别
+      1、系统的前端
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1、系统的前端">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1simpleui-django-simpleui-captcha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、simpleUi + django-simpleui-captcha
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#2property" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#2echarts" class="md-nav__link">
     <span class="md-ellipsis">
-      2、property应用场景
+      2、增加了一些echarts，进入系统就可以看到最近的报警情况。
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#3proprety" class="md-nav__link">
-    <span class="md-ellipsis">
-      3、属性描述符和proprety的区别
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
+  <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
-      4、属性描述符的触发
+      2、模块
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2、模块">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、系统管理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1、系统管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、用户、角色、菜单之间的关系
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2、字典管理
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2、资产
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2、资产">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、实例镜像
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      2、程序详情
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3、实例应用
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3、故障自愈
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3、故障自愈">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、接入自愈
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      2、自定义套餐包
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4cronjob" class="md-nav__link">
+    <span class="md-ellipsis">
+      4、cronjob
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5、日志告警
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6、批量任务
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7celery" class="md-nav__link">
+    <span class="md-ellipsis">
+      7、celery 任务
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      8、多云管理
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      3、总结
     </span>
   </a>
   
@@ -960,14 +1134,14 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2023-06-11 00:00:00" class="md-ellipsis">2023年6月11日星期日</time>
+                        <time datetime="2024-08-13 00:00:00" class="md-ellipsis">2024年8月13日星期二</time>
                       </div>
                     </li>
                     
                       <li class="md-nav__item">
                         <div class="md-nav__link">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 13h1.5v2.82l2.44 1.41-.75 1.3L15 16.69V13m4-5H5v11h4.67c-.43-.91-.67-1.93-.67-3a7 7 0 0 1 7-7c1.07 0 2.09.24 3 .67V8M5 21a2 2 0 0 1-2-2V5c0-1.11.89-2 2-2h1V1h2v2h8V1h2v2h1a2 2 0 0 1 2 2v6.1c1.24 1.26 2 2.99 2 4.9a7 7 0 0 1-7 7c-1.91 0-3.64-.76-4.9-2H5m11-9.85A4.85 4.85 0 0 0 11.15 16c0 2.68 2.17 4.85 4.85 4.85A4.85 4.85 0 0 0 20.85 16c0-2.68-2.17-4.85-4.85-4.85Z"/></svg>
-                          <time datetime="2023-06-11 00:00:00" class="md-ellipsis">2023年6月11日星期日</time>
+                          <time datetime="2024-08-13 00:00:00" class="md-ellipsis">2024年8月13日星期二</time>
                         </div>
                       </li>
                     
@@ -1038,13 +1212,19 @@ IN THE SOFTWARE.
     
     
     
-      <span class="md-tag">python</span>
+      <span class="md-tag">django</span>
     
   
     
     
     
-      <span class="md-tag">property</span>
+      <span class="md-tag">simpleui</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">celery</span>
     
   
 </nav>
@@ -1058,143 +1238,115 @@ Hack: check whether the content contains a h1 headline. If it doesn't, the
 page title (or respectively site name) is used as the main headline.
 -->
 
-<h1>属性、property和属性描述符</h1>
-
 
 <!-- Page content -->
-<p>属性、property和属性描述符</p>
+<p>刚开始初衷是做个故障自愈的系统，后来这加加，那边加加就变成了运维系统。</p>
 <!-- more -->
 
-<h2 id="1">1、实例属性和类属性的区别</h2>
-<p>在 Python 中，类属性是定义在类级别上的变量或常量，它们是所有该类实例共享的值。而实例属性是定义在实例级别上的变量或常量，每个实例都有其自己的值。</p>
-<p>区别主要在于：</p>
-<ul class="task-list">
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 值的存储位置：类属性存储在类的命名空间中，而实例属性存储在实例的命名空间中。</p>
+<h1 id="_1">前言</h1>
+<p>22年10月份的时候，我们线上系统频繁出现故障，报警不断，时不时的就需要人工处理。</p>
+<ul>
+<li>
+<p>公司对于运维方面不是很重视，加上拥抱阿里云和腾讯云，云平台只会报警，报完警就只能人工去处理问题，或者自己写个脚本处理这个问题，将脚本都分发到每台机器上去。</p>
 </li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 访问方式：类属性可以通过类名或实例访问，但实例属性只能通过实例访问。</p>
-</li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 继承：子类会继承父类的类属性，但不会继承父类的实例属性。</p>
+<li>
+<p>自定义的报警都是处理的特定的问题，不能很好的统一规范管理，很多报警脚本都是散落在各个机器上，很多时候都找不到脚本丢在哪里。</p>
 </li>
 </ul>
-<p>示例：</p>
-<p><div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">class</span> <span class="nc">MyClass</span><span class="p">:</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">class_attribute</span> <span class="o">=</span> <span class="s1">&#39;class_value&#39;</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance_attribute</span><span class="p">):</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">instance_attribute</span> <span class="o">=</span> <span class="n">instance_attribute</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">my_instance_1</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">(</span><span class="s1">&#39;instance_value_1&#39;</span><span class="p">)</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">my_instance_2</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">(</span><span class="s1">&#39;instance_value_2&#39;</span><span class="p">)</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="nb">print</span><span class="p">(</span><span class="n">MyClass</span><span class="o">.</span><span class="n">class_attribute</span><span class="p">)</span>  <span class="c1"># 输出：&#39;class_value&#39;</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">my_instance_1</span><span class="o">.</span><span class="n">class_attribute</span><span class="p">)</span>  <span class="c1"># 输出：&#39;class_value&#39;</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="nb">print</span><span class="p">(</span><span class="n">my_instance_1</span><span class="o">.</span><span class="n">instance_attribute</span><span class="p">)</span>  <span class="c1"># 输出：&#39;instance_value_1&#39;</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="nb">print</span><span class="p">(</span><span class="n">my_instance_2</span><span class="o">.</span><span class="n">instance_attribute</span><span class="p">)</span>  <span class="c1"># 输出：&#39;instance_value_2&#39;</span>
-</span></code></pre></div>
-在上述代码中，class_attribute 是一个类属性，被 MyClass 的所有实例共享。而 instance_attribute 则是一个实例属性，每个实例都有一份自己的值。</p>
-<h2 id="2property">2、property应用场景</h2>
-<ul class="task-list">
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 计算属性：有时候我们需要根据对象的状态计算出某个属性的值，这时候可以使用 property 将一个方法转换成一个只读属性，以便在访问这个属性时动态计算出其值。</p>
-</li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 数据校验：当我们想要限制对象的某个属性的取值范围或格式时，可以使用属性的 setter 方法对输入数据进行校验，并确保它们满足要求。</p>
-</li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 防止意外修改：有时候我们希望某些属性只能被读取，而不能被修改，可以使用 property 将其设置为只读属性。</p>
-</li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 封装内部实现细节：属性还可以用来隐藏对象内部的实现细节，从而提高代码的安全性和可维护性。</p>
-</li>
-</ul>
-<h2 id="3proprety">3、属性描述符和proprety的区别</h2>
-<p>属性描述符和property都是Python中用于定义类属性的机制，但它们的实现方式不同。</p>
-<p>属性描述符是一个类，该类定义了三个方法：<strong>get</strong>()、<strong>set</strong>()和__delete__()。这些方法允许您控制属性的访问、修改和删除。属性描述符可以与任何类属性一起使用，并且一个属性描述符可以被多个类属性共享。当一个属性描述符被赋值给一个类属性时，它会替换该属性的默认行为。例如，在一个类中定义一个属性描述符用于限制属性的取值范围：</p>
-<p><div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">class</span> <span class="nc">Range</span><span class="p">:</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">min_value</span><span class="p">,</span> <span class="n">max_value</span><span class="p">):</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">min_value</span> <span class="o">=</span> <span class="n">min_value</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">max_value</span> <span class="o">=</span> <span class="n">max_value</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="k">def</span> <span class="fm">__get__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="n">owner</span><span class="p">):</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>        <span class="k">return</span> <span class="n">instance</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">]</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="k">def</span> <span class="fm">__set__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>        <span class="k">if</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">min_value</span> <span class="ow">or</span> <span class="n">value</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_value</span><span class="p">:</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Value out of range&quot;</span><span class="p">)</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>        <span class="n">instance</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    <span class="k">def</span> <span class="nf">__set_name__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">owner</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="k">class</span> <span class="nc">MyClass</span><span class="p">:</span>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>    <span class="n">x</span> <span class="o">=</span> <span class="n">Range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="n">my_obj</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">()</span>
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="n">my_obj</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="nb">print</span><span class="p">(</span><span class="n">my_obj</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="n">my_obj</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">15</span> <span class="c1"># Raises ValueError: Value out of range</span>
-</span></code></pre></div>
-在这个例子中，属性描述符Range控制了属性x的取值范围。</p>
-<p>另一方面，property是一个内置函数，它提供了一种简化属性访问的方式。与属性描述符不同，property不是一个类，而是一个包装器函数，它接受三个可选参数：fget、fset和fdel。这些参数分别指定获取、设置和删除属性时所调用的方法。如果只需要定义读取属性的方法，则可以省略fset和fdel。例如：</p>
-<p><div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">class</span> <span class="nc">MyClass</span><span class="p">:</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_x</span> <span class="o">=</span> <span class="n">x</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="nd">@property</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="k">def</span> <span class="nf">x</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Getting x&quot;</span><span class="p">)</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_x</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="nd">@x</span><span class="o">.</span><span class="n">setter</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    <span class="k">def</span> <span class="nf">x</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Setting x&quot;</span><span class="p">)</span>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_x</span> <span class="o">=</span> <span class="n">value</span>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="n">my_obj</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="nb">print</span><span class="p">(</span><span class="n">my_obj</span><span class="o">.</span><span class="n">x</span><span class="p">)</span> <span class="c1"># Calls getter method</span>
-</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="n">my_obj</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># Calls setter method</span>
-</span></code></pre></div>
-在这个例子中，property包装器定义了一个名为x的属性，使用@property修饰器标记getter方法，使用@x.setter修饰器标记setter方法。这样就可以像访问普通属性一样来访问和修改x属性。当访问x属性时，会自动调用getter方法；当修改x属性时，会自动调用setter方法。</p>
-<p>总的来说，属性描述符提供了更灵活的属性控制机制，而property则提供了更简单、更易于使用的语法糖。</p>
-<h2 id="4">4、属性描述符的触发</h2>
-<p>描述符是一种可以自定义属性访问的方式，它能够通过属性访问来拦截对一个对象属性的读取操作、赋值操作或删除操作，从而实现自定义逻辑。要想识别到属性调用，需要在描述符类中实现__get__、__set__和__delete__这三个方法中的至少一个。</p>
-<p>其中，<strong>get</strong>(self, instance, owner)方法会在获取属性值时被调用，它接收两个参数：instance表示实例对象，owner表示定义该属性的类，如果该属性是通过类直接访问，那么instance为None；如果该属性是通过实例访问，那么instance为实例本身。<strong>set</strong>(self, instance, value)方法会在给属性赋值时被调用，它接收三个参数：instance表示实例对象，value表示要赋的值。<strong>delete</strong>(self, instance)方法会在删除属性时被调用，它接收两个参数：instance表示实例对象。
-当使用描述符时， <mark>只要将其作为一个类的属性，那么就能够在该属性被访问、赋值或删除时自动触发相应的方法。</mark> 例如，下面是一个简单的描述符类，它能够记录属性访问的次数：</p>
-<p><div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">class</span> <span class="nc">CountAccess</span><span class="p">:</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="k">def</span> <span class="fm">__get__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="n">owner</span><span class="p">):</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>        <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">instance</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    <span class="k">def</span> <span class="fm">__set__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>        <span class="nb">setattr</span><span class="p">(</span><span class="n">instance</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    <span class="k">def</span> <span class="fm">__delete__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance</span><span class="p">):</span>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>        <span class="nb">delattr</span><span class="p">(</span><span class="n">instance</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="k">class</span> <span class="nc">MyClass</span><span class="p">:</span>
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>    <span class="n">x</span> <span class="o">=</span> <span class="n">CountAccess</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
-</span></code></pre></div>
-当通过实例访问x属性时，就会自动触发CountAccess中相应的方法，例如：</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">obj</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">()</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">obj</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># 触发 CountAccess.__set__ 方法，记录访问次数并设置 obj 的 x 属性值为 10</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># 触发 CountAccess.__get__ 方法，记录访问次数并获取 obj 的 x 属性值</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">del</span> <span class="n">obj</span><span class="o">.</span><span class="n">x</span>  <span class="c1"># 触发 CountAccess.__delete__ 方法，记录访问次数并删除 obj 的 x 属性</span>
-</span></code></pre></div>
-<p><br/>
-<br/></p>
+<p>为了更好的统一处理云平台、prometheus触发的报警，我决定自己开发一个故障自愈的系统。云平台可以触发一个告警回调，根据每个资源的不同的回调传递参数进行区分，不同的告警项触发不同的处理方式。</p>
+<h2 id="1">1、系统的前端</h2>
+<h3 id="1simpleui-django-simpleui-captcha">1、simpleUi + django-simpleui-captcha</h3>
+<p>之前有一个系统使用的是vue-admin-template，用起来确实很方便，但是一旦自己增加一点东西就会很丑，所以这个我就使用的是simpleUi + django-simpleui-captcha 作为后台的界面和登录验证码。</p>
 <figure>
-<figcaption>觉得有用的老铁们可以"微信"赞助一杯82年的雪碧呦。</figcaption>
-<a class="glightbox" href="../../../../img/person/WechatIMG36353.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="txtddd" src="../../../../img/person/WechatIMG36353.jpg" width="300" /></a> 
+  <a class="glightbox" href="../../../../img/20240813/1723559376532.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="登录" src="../../../../img/20240813/1723559376532.png" /></a>
+  <figcaption>登录首页</figcaption>
 </figure>
+<h3 id="2echarts">2、增加了一些echarts，进入系统就可以看到最近的报警情况。</h3>
+<figure>
+  <a class="glightbox" href="../../../../img/20240813/1723561309116.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="首页" src="../../../../img/20240813/1723561309116.png" /></a>
+  <figcaption>系统首页</figcaption>
+</figure>
+<h2 id="2">2、模块</h2>
+<h3 id="1_1">1、系统管理</h3>
+<p>这个模块里面主要包含了用户的管理、角色管理、菜单管理、字典管理、登录日志、操作日志、告警通知记录、ip白名单等。</p>
+<h4 id="1_2">1、用户、角色、菜单之间的关系</h4>
+<ul>
+<li>
+<p>我重写了用户的模型，新增了菜单模型，没有重写权限的模型，做个简单的rbac我觉得就够了。</p>
+</li>
+<li>
+<p>用户和原来的group都是控制用户权限，我这里面用户一般不单独设置权限，所有权限都是在group里面配置的，将group理解为角色。</p>
+</li>
+<li>
+<p>菜单是在中间件中进行控制，通过simpleUi的自定义菜单，控制用户对应权限对应的菜单。</p>
+</li>
+</ul>
+<figure>
+  <a class="glightbox" href="../../../../img/20240813/1723564691546.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="首页" src="../../../../img/20240813/1723564691546.png" /></a>
+  <figcaption>菜单管理</figcaption>
+</figure>
+<h4 id="2_1">2、字典管理</h4>
+<p>参考github上很多后台管理系统，发现很多都有个字典管理系统，起初没用上，随着系统的使用增多，发现有的数据新建一张表没必要，用字典却是很方便，并且管理和修改也比较方便。</p>
+<figure>
+  <a class="glightbox" href="../../../../img/20240813/1723564567632.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="首页" src="../../../../img/20240813/1723564567632.png" /></a>
+  <figcaption>字典管理</figcaption>
+</figure>
+<h3 id="2_2">2、资产</h3>
+<p>平台的数据基本上都是来自于资产，这个资产相当于一个小型的cmdb，而资产中的数据则是同步于云平台的数据。
+这个模块主要有服务器信息、服务器组、镜像、云实例、程序详情、实例应用等。</p>
+<h4 id="1_3">1、实例镜像</h4>
+<p>根据服务器信息，自动生成实例镜像，便于云实例快速创建云上服务器实例。</p>
+<figure>
+  <a class="glightbox" href="../../../../img/20240813/1723567090567.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="首页" src="../../../../img/20240813/1723567090567.png" /></a>
+  <figcaption>实例镜像</figcaption>
+</figure>
+<h4 id="2_3">2、程序详情</h4>
+<p>是指每台机器上的应用的配置，配置是否进程检查、端口检查、异常自动重启</p>
+<figure>
+  <a class="glightbox" href="../../../../img/20240813/1723567044779.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="首页" src="../../../../img/20240813/1723567044779.png" /></a>
+  <figcaption>程序监控</figcaption>
+</figure>
+<h4 id="3">3、实例应用</h4>
+<p>每个实例上绑定程序详情，检查应用状态。包括通过自定义的agent上传应用程序的监控数据。</p>
+<figure>
+  <a class="glightbox" href="../../../../img/20240813/1723566933304.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="首页" src="../../../../img/20240813/1723566933304.png" /></a>
+  <figcaption>实例应用</figcaption>
+</figure>
+<h3 id="3_1">3、故障自愈</h3>
+<p>这个模块就是这个系统的初衷，将云平台发出的告警故障，结合告警数据，通过一个系统来统一的汇总，处理故障。
+这个模块主要包含，cvm告警、es告警、prometheus告警、告警分析、接入自、自动分析上传结果、自定义套餐包、自愈执行结果等。</p>
+<h4 id="1_4">1、接入自愈</h4>
+<p>监控项可以是云平台的，也可以是自定义的，执行方式可以远程或者本地，异步或者同步。</p>
+<figure>
+  <a class="glightbox" href="../../../../img/20240813/1723648167298.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="首页" src="../../../../img/20240813/1723648167298.png" /></a>
+  <figcaption>接入自愈</figcaption>
+</figure>
+<h4 id="2_4">2、自定义套餐包</h4>
+<p>自定义套餐包在接入自愈时可以选择怎么处理这个告警。</p>
+<figure>
+  <a class="glightbox" href="../../../../img/20240813/1723648849340.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="首页" src="../../../../img/20240813/1723648849340.png" /></a>
+  <figcaption>接入自愈</figcaption>
+</figure>
+<h3 id="4cronjob">4、cronjob</h3>
+<p>这个就是依赖于ansible，将服务器上的所有脚本都统一管理，发布，查看执行日志。</p>
+<figure>
+  <a class="glightbox" href="../../../../img/20240813/1723649163634.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="首页" src="../../../../img/20240813/1723649163634.png" /></a>
+  <figcaption>cronjob</figcaption>
+</figure>
+<h3 id="5">5、日志告警</h3>
+<p>里面包含es和cls告警日志的捕获，分析。</p>
+<figure>
+  <a class="glightbox" href="../../../../img/20240813/1723649271984.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="首页" src="../../../../img/20240813/1723649271984.png" /></a>
+  <figcaption>cls告警</figcaption>
+</figure>
+<h3 id="6">6、批量任务</h3>
+<p>包含线上配置文件的发布，ansible playbook的执行，文件的上传等。</p>
+<h3 id="7celery">7、celery 任务</h3>
+<p>这个就是需要定时执行的计算任务的管理。</p>
+<h3 id="8">8、多云管理</h3>
+<p>包含线上域名等管理。</p>
+<h2 id="3_2">3、总结</h2>
+<p>文档也没啥好写的，主要提供给有这个需求的朋友一些思路，这个算是我在生产环境中用的比较多的一个系统了。</p>
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <div style="text-align: center" >
   <font size="2" color="grey" >本文阅读量&nbsp;<span id="busuanzi_value_page_pv"></span>&nbsp;次</font>
@@ -1303,7 +1455,7 @@ page title (or respectively site name) is used as the main headline.
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../../09/drf%E5%A4%96%E9%94%AE%E5%BA%8F%E5%88%97%E5%8C%96/" class="md-footer__link md-footer__link--prev" aria-label="上一页: drf外键序列化">
+          <a href="../../05/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9D%83%E9%99%90%E6%A0%A1%E9%AA%8C/" class="md-footer__link md-footer__link--prev" aria-label="上一页: mysql数据库权限校验">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1313,27 +1465,11 @@ page title (or respectively site name) is used as the main headline.
                 上一页
               </span>
               <div class="md-ellipsis">
-                drf外键序列化
+                mysql数据库权限校验
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../../20/django%20orm%20NoneType%20object%20is%20not%20iterable/" class="md-footer__link md-footer__link--next" aria-label="下一页: django orm &#39;NoneType&#39; object is not iterable">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                下一页
-              </span>
-              <div class="md-ellipsis">
-                django orm 'NoneType' object is not iterable
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
         
       </nav>
     

@@ -101,7 +101,16 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6676480188236347"
      crossorigin="anonymous"></script>
 
-  </head>
+   <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -1067,13 +1076,13 @@ page title (or respectively site name) is used as the main headline.
 
 <h2 id="1">1、报错截图</h2>
 <p>当小伙伴们遇到这种沙雕问题时是不是也是很烦躁?
-<img alt="django" src="../../../../img/20230620/image.png" /></p>
+<a class="glightbox" href="../../../../img/20230620/image.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="django" src="../../../../img/20230620/image.png" /></a></p>
 <h2 id="2traceback">2、分析Traceback</h2>
 <p>发现有熟悉的，我重写了admin.ModelAdmin的save_related方法，分析应该是再多对多保存时出现了问题。
-<img alt="django" src="../../../../img/20230620/image2.png" /></p>
-<p><img alt="django" src="../../../../img/20230620/image3.png" /></p>
+<a class="glightbox" href="../../../../img/20230620/image2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="django" src="../../../../img/20230620/image2.png" /></a></p>
+<p><a class="glightbox" href="../../../../img/20230620/image3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="django" src="../../../../img/20230620/image3.png" /></a></p>
 <h2 id="3scripts">3、看上去好像是scripts这个字段在保存时出现了问题。然后发现这个字段在后台也做了一个表单验证。</h2>
-<p><img alt="django" src="../../../../img/20230620/image4.png" />
+<p><a class="glightbox" href="../../../../img/20230620/image4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="django" src="../../../../img/20230620/image4.png" /></a>
  在校验scripts这个字段时，当job_type==2时没有对应的返回，所以job_type==1每次都成功了，2都是失败的。</p>
 <h2 id="4clean_-fieldname">4、clean_ &lt; fieldname &gt;()</h2>
 <p>方法是在表单子类上调用的——其中 &lt; fieldname &gt; 被替换为表单字段属性的名称。这个方法做任何特定属性的清理工作，与字段的类型无关。这个方法不传递任何参数。你需要在 self.cleaned_data 中查找字段的值，并且记住，此时它将是一个 Python 对象，而不是在表单中提交的原始字符串（它将在 cleaned_data 中，因为上面的一般字段 clean() 方法已经清理了一次数据）。</p>
@@ -1086,7 +1095,7 @@ page title (or respectively site name) is used as the main headline.
 <br/></p>
 <figure>
 <figcaption>觉得有用的老铁们可以"微信"赞助一杯82年的雪碧呦。</figcaption>
-<img alt="txtddd" src="../../../../img/person/WechatIMG36353.jpg" width="300" /> 
+<a class="glightbox" href="../../../../img/person/WechatIMG36353.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="txtddd" src="../../../../img/person/WechatIMG36353.jpg" width="300" /></a> 
 </figure>
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <div style="text-align: center" >
@@ -1274,5 +1283,7 @@ page title (or respectively site name) is used as the main headline.
       <script src="../../../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

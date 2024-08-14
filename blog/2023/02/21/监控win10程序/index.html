@@ -99,7 +99,16 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6676480188236347"
      crossorigin="anonymous"></script>
 
-  </head>
+   <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -1208,13 +1217,13 @@ page title (or respectively site name) is used as the main headline.
 <p>为啥另一个进程没有单独用bat的脚本处理呢？上面的Program Files 这个中间有空格，放在golang里面调用，win10只识别到了program，后面就断开了。</p>
 <h2 id="2">2、配置定时程序</h2>
 <h3 id="1windowscronjob">1、windows的cronjob</h3>
-<p><img alt="txtddd" src="../../../../img/20230221/image.png" /></p>
+<p><a class="glightbox" href="../../../../img/20230221/image.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="txtddd" src="../../../../img/20230221/image.png" /></a></p>
 <h3 id="2_1">2、如果不是只在用户登录时运行，默认就放到后台了。</h3>
-<p><img alt="txtddd" src="../../../../img/20230221/image2.png" /></p>
+<p><a class="glightbox" href="../../../../img/20230221/image2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="txtddd" src="../../../../img/20230221/image2.png" /></a></p>
 <h3 id="35">3、每5分钟一次</h3>
-<p><img alt="txtddd" src="../../../../img/20230221/image3.png" /></p>
+<p><a class="glightbox" href="../../../../img/20230221/image3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="txtddd" src="../../../../img/20230221/image3.png" /></a></p>
 <h3 id="4">4、根目录得选，避免傻逼问题。</h3>
-<p><img alt="txtddd" src="../../../../img/20230221/image4.png" /></p>
+<p><a class="glightbox" href="../../../../img/20230221/image4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="txtddd" src="../../../../img/20230221/image4.png" /></a></p>
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <div style="text-align: center" >
   <font size="2" color="grey" >本文阅读量&nbsp;<span id="busuanzi_value_page_pv"></span>&nbsp;次</font>
@@ -1385,5 +1394,7 @@ page title (or respectively site name) is used as the main headline.
       <script src="../../../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

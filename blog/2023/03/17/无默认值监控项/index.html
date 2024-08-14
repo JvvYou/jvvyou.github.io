@@ -101,7 +101,16 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6676480188236347"
      crossorigin="anonymous"></script>
 
-  </head>
+   <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -1127,7 +1136,7 @@ page title (or respectively site name) is used as the main headline.
 </details>
 <h2 id="2pushgateway">2、pushGateWay无默认值</h2>
 <p>pushGateWay 的数据层面, pushgateway 的数据来源是推送到pgw，然后prometheus 再去拉取pgw对应的metric。所以pgw跟exporter就有个区别，pgw没有默认值。
-<img alt="image" src="../../../../img/20230317/image.png" /></p>
+<a class="glightbox" href="../../../../img/20230317/image.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="../../../../img/20230317/image.png" /></a></p>
 <p>那么在当上图中 short-lived jobs没有向pgw推送数据时，pgw不知道是否存在该监控向量。所以此时对应监控项用来判断应用的存活状态就多少有些麻烦。</p>
 <h2 id="3">3、告警规则示例</h2>
 <details class="告警规则">
@@ -1224,7 +1233,7 @@ page title (or respectively site name) is used as the main headline.
 <br/></p>
 <figure>
 <figcaption>觉得有用的老铁们可以"微信"赞助一杯82年的雪碧呦。</figcaption>
-<img alt="txtddd" src="../../../../img/person/WechatIMG36353.jpg" width="300" /> 
+<a class="glightbox" href="../../../../img/person/WechatIMG36353.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="txtddd" src="../../../../img/person/WechatIMG36353.jpg" width="300" /></a> 
 </figure>
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <div style="text-align: center" >
@@ -1412,5 +1421,7 @@ page title (or respectively site name) is used as the main headline.
       <script src="../../../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

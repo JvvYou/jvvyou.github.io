@@ -101,7 +101,16 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6676480188236347"
      crossorigin="anonymous"></script>
 
-  </head>
+   <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -1085,7 +1094,7 @@ page title (or respectively site name) is used as the main headline.
 <h2 id="3debug">3、开始debug</h2>
 <p>抓住 target_model_url，发现他妹的，reverse支持两种参数模式，一种是不带参数，一种带参数</p>
 <p>admin:myapp_mymodel_change，我所配置的mymodel名字里面有大写字符的，debug出来的别的app的name都是全小写的，看到这觉得这怎么这么傻逼，立马改了我的果然生效。</p>
-<p><img alt="django" src="../../../../img/20230911/image.png" /></p>
+<p><a class="glightbox" href="../../../../img/20230911/image.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="django" src="../../../../img/20230911/image.png" /></a></p>
 <h2 id="4">4、附上我可行的两种方式</h2>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">target_model_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;/admin/receive/servermetricextendanalysisdata/</span><span class="si">{</span><span class="n">smead_obj</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s1">/change/&#39;</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">return</span> <span class="n">format_html</span><span class="p">(</span><span class="s1">&#39;&lt;a href=&quot;</span><span class="si">{}</span><span class="s1">&quot;&gt;点击查看结果&lt;/a&gt;&#39;</span><span class="p">,</span> <span class="n">target_model_url</span><span class="p">)</span>
@@ -1100,7 +1109,7 @@ page title (or respectively site name) is used as the main headline.
 <br/></p>
 <figure>
 <figcaption>觉得有用的老铁们可以"微信"赞助一杯82年的雪碧呦。</figcaption>
-<img alt="txtddd" src="../../../../img/person/WechatIMG36353.jpg" width="300" /> 
+<a class="glightbox" href="../../../../img/person/WechatIMG36353.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="txtddd" src="../../../../img/person/WechatIMG36353.jpg" width="300" /></a> 
 </figure>
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <div style="text-align: center" >
@@ -1288,5 +1297,7 @@ page title (or respectively site name) is used as the main headline.
       <script src="../../../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

@@ -101,7 +101,16 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6676480188236347"
      crossorigin="anonymous"></script>
 
-  </head>
+   <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -1175,7 +1184,7 @@ page title (or respectively site name) is used as the main headline.
 </span><span id="__span-1-49"><a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>                             <span class="s1">&#39;ce071717fdf178a20c7e&#39;</span><span class="p">)</span>
 </span></code></pre></div>
 <h3 id="22grouping_keygrouping_keyjob">2.2、指定grouping_key，根据grouping_key中的值进行分组，默认就是根据job进行分组</h3>
-<p><img alt="django" src="../../../../img/20230321/image.png" /></p>
+<p><a class="glightbox" href="../../../../img/20230321/image.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="django" src="../../../../img/20230321/image.png" /></a></p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">grouping_key</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;process_name&quot;</span><span class="p">:</span> <span class="n">process_name</span><span class="p">,</span> <span class="s2">&quot;grouping_src_instance&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">src_ip_label_value</span><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="23">2.3、此时可以看看上传监控项后产生了多少数据</h3>
@@ -1195,7 +1204,7 @@ page title (or respectively site name) is used as the main headline.
 <br/></p>
 <figure>
 <figcaption>觉得有用的老铁们可以"微信"赞助一杯82年的雪碧呦。</figcaption>
-<img alt="txtddd" src="../../../../img/person/WechatIMG36353.jpg" width="300" /> 
+<a class="glightbox" href="../../../../img/person/WechatIMG36353.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="txtddd" src="../../../../img/person/WechatIMG36353.jpg" width="300" /></a> 
 </figure>
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <div style="text-align: center" >
@@ -1383,5 +1392,7 @@ page title (or respectively site name) is used as the main headline.
       <script src="../../../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

@@ -99,7 +99,16 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6676480188236347"
      crossorigin="anonymous"></script>
 
-  </head>
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -869,6 +878,53 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
+          <time datetime="2024-08-13 00:00:00">2024年8月13日星期二</time></li>
+        
+          <li class="md-meta__item">
+            分类于
+            
+              <a href="category/devops/" class="md-meta__link">devops</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              需要 2 分钟阅读时间
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="_1"><a class="toclink" href="2024/08/13/%E4%BB%8E%E6%95%85%E9%9A%9C%E8%87%AA%E6%84%88%E7%B3%BB%E7%BB%9F%E5%8F%98%E6%88%90%E8%BF%90%E7%BB%B4%E7%B3%BB%E7%BB%9F/">从故障自愈系统变成运维系统</a></h2>
+<p>刚开始初衷是做个故障自愈的系统，后来这加加，那边加加就变成了运维系统。</p>
+
+    
+      <nav class="md-post__action">
+        <a href="2024/08/13/%E4%BB%8E%E6%95%85%E9%9A%9C%E8%87%AA%E6%84%88%E7%B3%BB%E7%BB%9F%E5%8F%98%E6%88%90%E8%BF%90%E7%BB%B4%E7%B3%BB%E7%BB%9F/">
+          继续阅读
+        </a>
+      </nav>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="img/person/353251710663168_.pic_hd.jpg" alt="jvvyou">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
           <time datetime="2024-08-05 00:00:00">2024年8月5日星期一</time></li>
         
           <li class="md-meta__item">
@@ -1278,53 +1334,6 @@
   </div>
 </article>
       
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="img/person/353251710663168_.pic_hd.jpg" alt="jvvyou">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2023-09-11 00:00:00">2023年9月11日星期一</time></li>
-        
-          <li class="md-meta__item">
-            分类于
-            
-              <a href="category/devops/" class="md-meta__link">devops</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              需要 1 分钟阅读时间
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="django-noreversematch"><a class="toclink" href="2023/09/11/Django%20NoReverseMatch/">Django NoReverseMatch</a></h2>
-<p>在django的后台。想在列表里面新增一列，作为超链接到另一个模型的change页面去</p>
-
-    
-      <nav class="md-post__action">
-        <a href="2023/09/11/Django%20NoReverseMatch/">
-          继续阅读
-        </a>
-      </nav>
-    
-  </div>
-</article>
-      
       
         
           
@@ -1436,5 +1445,7 @@
       <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>
