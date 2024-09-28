@@ -1177,20 +1177,19 @@ page title (or respectively site name) is used as the main headline.
 </span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>runtime<span class="w"> </span>network<span class="w"> </span>not<span class="w"> </span>ready:<span class="w"> </span><span class="nv">NetworkReady</span><span class="o">=</span><span class="nb">false</span><span class="w"> </span>reason:NetworkPluginNotReady<span class="w"> </span>message:docker:<span class="w"> </span>network<span class="w"> </span>plugin<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>ready:<span class="w"> </span>cni<span class="w"> </span>config<span class="w"> </span>uninitialized
 </span></code></pre></div>
 最后看kubelet的报错找不到flannel的插件，然后去老机器上下载上传，最后节点正常。</p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>journalctl -fu kubelet 
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>journalctl -fu kubelet 
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>Oct 23 23:46:51 k8s-node01 kubelet[5447]: : [failed to find plugin &quot;flannel&quot; in path [/opt/cni/bin]]
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>Oct 23 23:46:51 k8s-node01 kubelet[5447]: W1023 23:46:51.095117    5447 cni.go:237] Unable to update cni config: no valid networks found in /etc/cni/net.d
 </span></code></pre></div>
-<br/>
-<br/></p>
-<figure>
-<figcaption>觉得有用的老铁们可以"微信"赞助一杯82年的雪碧呦。</figcaption>
-<a class="glightbox" href="../../../../img/person/WechatIMG36353.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="txtddd" src="../../../../img/person/WechatIMG36353.jpg" width="300" /></a> 
-</figure>
 
   <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   <div style="text-align: center" >
+    <br/>    
+    <p>觉得有用的老铁们可以"微信"赞助一杯82年的雪碧呦。</p>
+    <img src="/blog/img/person/WechatIMG36353.jpg" alt="觉得有用的老铁们可以微信赞助一杯82年的雪碧呦。" />
+    <br/> 
+  
     <font size="2" color="grey" >本文阅读量&nbsp;<span id="busuanzi_value_page_pv"></span>&nbsp;次</font>
   </div>
 
