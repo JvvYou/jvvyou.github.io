@@ -747,6 +747,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#istio" class="md-nav__link">
+    <span class="md-ellipsis">
+      istio 分布式追踪
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#istio-destinationrule" class="md-nav__link">
+    <span class="md-ellipsis">
+      istio DestinationRule 配置示例
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#istio-virtualservice" class="md-nav__link">
     <span class="md-ellipsis">
       istio VirtualService 配置示例
@@ -968,6 +986,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#istio" class="md-nav__link">
+    <span class="md-ellipsis">
+      istio 分布式追踪
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#istio-destinationrule" class="md-nav__link">
+    <span class="md-ellipsis">
+      istio DestinationRule 配置示例
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#istio-virtualservice" class="md-nav__link">
     <span class="md-ellipsis">
       istio VirtualService 配置示例
@@ -1005,6 +1041,102 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
+          <time datetime="2024-10-25 00:00:00">2024年10月25日星期五</time></li>
+        
+          <li class="md-meta__item">
+            分类于
+            
+              <a href="./" class="md-meta__link">istio</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              需要 5 分钟阅读时间
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="istio"><a class="toclink" href="../../2024/10/25/istio-%E5%88%86%E5%B8%83%E5%BC%8F%E8%BF%BD%E8%B8%AA/">istio 分布式追踪</a></h2>
+<p>istio版本1.23.2，k8s版本v1.30.2</p>
+<p>强烈建议先看一下这个文档：
+<a href="https://istio.io/latest/zh/docs/tasks/observability/distributed-tracing/overview/">分布式追踪概述</a></p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2024/10/25/istio-%E5%88%86%E5%B8%83%E5%BC%8F%E8%BF%BD%E8%B8%AA/">
+          继续阅读
+        </a>
+      </nav>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="../../img/person/index_logo.jpeg" alt="jvvyou">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2024-10-23 00:00:00">2024年10月23日星期三</time></li>
+        
+          <li class="md-meta__item">
+            分类于
+            
+              <a href="./" class="md-meta__link">istio</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              需要 1 分钟阅读时间
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="istio-destinationrule"><a class="toclink" href="../../2024/10/23/istio-destinationrule-%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B/">istio DestinationRule 配置示例</a></h2>
+<p>DestinationRule定义路由发生后适用于服务流量的策略。这些规则指定负载平衡配置、来自 Sidecar 的连接池大小以及异常检测设置，以检测并从负载平衡池中驱逐不健康的主机。</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2024/10/23/istio-destinationrule-%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B/">
+          继续阅读
+        </a>
+      </nav>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="../../img/person/index_logo.jpeg" alt="jvvyou">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
           <time datetime="2024-10-15 00:00:00">2024年10月15日星期二</time></li>
         
           <li class="md-meta__item">
@@ -1026,7 +1158,9 @@
   </header>
   <div class="md-post__content md-typeset">
     <h2 id="istio-virtualservice"><a class="toclink" href="../../2024/10/15/istio-virtualservice-%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B/">istio VirtualService 配置示例</a></h2>
-<p>刚开始试试感受一下就行,后面看看就行。</p>
+<p>影响流量路由的配置。定义一组VirtualService在主机寻址时应用的流量路由规则。每个路由规则都定义特定协议流量的匹配标准。如果流量匹配，则将其发送到注册表中定义的命名目标服务（或其子集/版本）。</p>
+<p>流量来源也可以在路由规则中进行匹配。这样就可以针对特定客户端环境定制路由。</p>
+<p>刚开始可以自己试试,后面看看就行。</p>
 
     
       <nav class="md-post__action">
