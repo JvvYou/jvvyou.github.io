@@ -1284,7 +1284,7 @@
                       <li class="md-nav__item">
                         <div class="md-nav__link">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 13h1.5v2.82l2.44 1.41-.75 1.3L15 16.69V13m4-5H5v11h4.67c-.43-.91-.67-1.93-.67-3a7 7 0 0 1 7-7c1.07 0 2.09.24 3 .67V8M5 21a2 2 0 0 1-2-2V5c0-1.11.89-2 2-2h1V1h2v2h8V1h2v2h1a2 2 0 0 1 2 2v6.1c1.24 1.26 2 2.99 2 4.9a7 7 0 0 1-7 7c-1.91 0-3.64-.76-4.9-2H5m11-9.85A4.85 4.85 0 0 0 11.15 16c0 2.68 2.17 4.85 4.85 4.85A4.85 4.85 0 0 0 20.85 16c0-2.68-2.17-4.85-4.85-4.85Z"/></svg>
-                          <time datetime="2024-10-15 00:00:00" class="md-ellipsis">2024年10月15日星期二</time>
+                          <time datetime="2024-11-01 00:00:00" class="md-ellipsis">2024年11月1日星期五</time>
                         </div>
                       </li>
                     
@@ -1839,7 +1839,9 @@ service-a-svc配置：
 <h4 id="311vshostsservice-b">3.1.1、将上述vs中的hosts中删除service-b会出现什么效果？</h4>
 <p><a class="glightbox" href="../../../../img/20241016/1729152049541.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="vs-dr-subset-2" src="../../../../img/20241016/1729152049541.png" /></a></p>
 <p>what???怎么会出现这种情况？？？</p>
-<p>看上去似乎经过vs，经过测试，我给vs进行了故障注入,两个route分别注入,service-b-route并没有生效，service-a-routes生效了，所以虽然kiali中感觉vs生效了。所以还是走的svc，svc对应了两个deployment，发生了负载均衡。
+<p><del>似乎应用了vs规则，经过测试，我给vs进行了故障注入,两个route分别注入,service-b-route并没有生效，service-a-routes生效了，所以虽然kiali中感觉vs生效了。所以还是走的svc，svc对应了两个deployment，发生了负载均衡。</del></p>
+<p>这个测试可能是有问题的，可以忽略，内部服务，没有配置mesh gateway vs应该是不会生效的。
+内部流量生效，需要参考<a href="/blog/2024/10/30/istio-gateway-试玩/#2mesh-gateway">mesh gateway 规则流量变化</a></p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">networking.istio.io/v1</span>
 </span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VirtualService</span>
 </span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="nt">metadata</span><span class="p">:</span>
@@ -1871,7 +1873,7 @@ service-a-svc配置：
 </span><span id="__span-16-29"><a id="__codelineno-16-29" name="__codelineno-16-29" href="#__codelineno-16-29"></a><span class="w">       </span><span class="nt">percentage</span><span class="p">:</span>
 </span><span id="__span-16-30"><a id="__codelineno-16-30" name="__codelineno-16-30" href="#__codelineno-16-30"></a><span class="w">         </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
 </span><span id="__span-16-31"><a id="__codelineno-16-31" name="__codelineno-16-31" href="#__codelineno-16-31"></a><span class="w">       </span><span class="nt">fixedDelay</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
-</span></code></pre></div></p>
+</span></code></pre></div>
 <h4 id="312vshostsservice-bhttpnameservice-b-route">3.1.2、将上述vs中的hosts的service-b删除，http.name.service-b-route 也删掉</h4>
 <p><div class="language-yaml highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">networking.istio.io/v1</span>
 </span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VirtualService</span>
