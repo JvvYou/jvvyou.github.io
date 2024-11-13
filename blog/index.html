@@ -928,6 +928,59 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
+          <time datetime="2024-11-03 00:00:00">2024年11月3日星期日</time></li>
+        
+          <li class="md-meta__item">
+            分类于
+            
+              <a href="category/istio/" class="md-meta__link">istio</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              需要 6 分钟阅读时间
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="istio-envoy"><a class="toclink" href="2024/11/03/istio-envoy-%E8%AE%BF%E9%97%AE%E5%A4%96%E9%83%A8%E6%9C%8D%E5%8A%A1/">istio envoy 访问外部服务</a></h2>
+<p>&ensp;&ensp;由于默认情况下，启用 Istio 的 pod 的所有出站流量都会重定向到其 sidecar 代理，因此集群外部 URL 的可访问性取决于代理的配置。默认情况下，Istio 将 Envoy 代理配置为传递未知服务的请求。虽然这提供了一种方便的 Istio 入门方法，但通常最好配置更严格的控制。</p>
+<p>此任务向您展示如何通过三种不同的方式访问外部服务：</p>
+<ul>
+<li>允许 Envoy 代理将请求传递到网格内未配置的服务。</li>
+<li>配置服务条目以提供对外部服务的受控访问。</li>
+<li>完全绕过特定范围 IP 的 Envoy 代理。</li>
+</ul>
+
+    
+      <nav class="md-post__action">
+        <a href="2024/11/03/istio-envoy-%E8%AE%BF%E9%97%AE%E5%A4%96%E9%83%A8%E6%9C%8D%E5%8A%A1/">
+          继续阅读
+        </a>
+      </nav>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="img/person/index_logo.jpeg" alt="jvvyou">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
           <time datetime="2024-10-30 00:00:00">2024年10月30日星期三</time></li>
         
           <li class="md-meta__item">
@@ -939,7 +992,7 @@
           
           <li class="md-meta__item">
             
-              需要 10 分钟阅读时间
+              需要 14 分钟阅读时间
             
           </li>
         
@@ -949,7 +1002,7 @@
   </header>
   <div class="md-post__content md-typeset">
     <h2 id="istio-gateway"><a class="toclink" href="2024/10/30/istio-gateway-%E8%AF%95%E7%8E%A9/">istio gateway 试玩</a></h2>
-<p>Gateway描述在网格边缘运行的负载均衡器，用于接收传入或传出的 HTTP/TCP 连接。该规范描述了应公开的一组端口、要使用的协议类型、负载均衡器的 SNI 配置等。</p>
+<p>&ensp;&ensp;Gateway描述在网格边缘运行的负载均衡器，用于接收传入或传出的 HTTP/TCP 连接。该规范描述了应公开的一组端口、要使用的协议类型、负载均衡器的 SNI 配置等。</p>
 <p>实验性功能不玩，例如Ingress Sidecar TLS 终止</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>k8s v1.30.2
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>client version: 1.23.2
@@ -1340,53 +1393,6 @@
     
       <nav class="md-post__action">
         <a href="2024/06/03/%E5%BD%93%E6%88%91%E9%81%87%E5%88%B0%E4%BA%86%E7%88%AC%E8%99%AB/">
-          继续阅读
-        </a>
-      </nav>
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="img/person/index_logo.jpeg" alt="jvvyou">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-02-21 00:00:00">2024年2月21日星期三</time></li>
-        
-          <li class="md-meta__item">
-            分类于
-            
-              <a href="category/docker/" class="md-meta__link">docker</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              需要 5 分钟阅读时间
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="_1"><a class="toclink" href="2024/02/21/%E5%AE%B9%E5%99%A8%E7%BD%91%E7%BB%9C%E7%90%86%E8%A7%A3/">容器网络理解</a></h2>
-<p>容器网络理解。</p>
-
-    
-      <nav class="md-post__action">
-        <a href="2024/02/21/%E5%AE%B9%E5%99%A8%E7%BD%91%E7%BB%9C%E7%90%86%E8%A7%A3/">
           继续阅读
         </a>
       </nav>
