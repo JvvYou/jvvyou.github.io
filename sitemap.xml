@@ -116,6 +116,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://jvvyou.github.io/blog/2024/10/23/istio-destinationrule/</loc>
+         <lastmod>2024-12-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://jvvyou.github.io/blog/2024/10/15/istio-virtualservice-%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B/</loc>
          <lastmod>2024-12-09</lastmod>
          <changefreq>daily</changefreq>

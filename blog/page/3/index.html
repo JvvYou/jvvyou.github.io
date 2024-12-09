@@ -915,6 +915,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#prometheussdk-client_golang" class="md-nav__link">
+    <span class="md-ellipsis">
+      prometheus的sdk client_golang 使用 定时器
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#golang" class="md-nav__link">
     <span class="md-ellipsis">
       golang字符串转结构体
@@ -995,15 +1004,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#supervisor" class="md-nav__link">
-    <span class="md-ellipsis">
-      supervisor启动产生多个进程
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1018,6 +1018,54 @@
       <header class="md-typeset">
         <h1 id="index">Index</h1>
       </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="../../img/person/index_logo.jpeg" alt="jvvyou">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2023-08-08 00:00:00">2023年8月8日星期二</time></li>
+        
+          <li class="md-meta__item">
+            分类于
+            
+              <a href="../../category/devops/" class="md-meta__link">devops</a>, 
+              <a href="../../category/monitor/" class="md-meta__link">monitor</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              需要 2 分钟阅读时间
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="prometheussdk-client_golang"><a class="toclink" href="../../2023/08/08/golang%E5%AE%9A%E6%97%B6%E5%99%A8/">prometheus的sdk client_golang 使用 定时器</a></h2>
+<p>之前线上监控的agent都是直接  time.Sleep(time.Duration(collectInterval) * time.Second) ,多少有些许的low，每次开始采集数据的时间都是从程序开始执行就开始采集，很显然这种偷懒的方式是不合理的。</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2023/08/08/golang%E5%AE%9A%E6%97%B6%E5%99%A8/">
+          继续阅读
+        </a>
+      </nav>
+    
+  </div>
+</article>
       
         <article class="md-post md-post--excerpt">
   <header class="md-post__header">
@@ -1448,54 +1496,6 @@
     
       <nav class="md-post__action">
         <a href="../../2023/03/09/%E7%9B%91%E6%8E%A7windows/">
-          继续阅读
-        </a>
-      </nav>
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="../../img/person/index_logo.jpeg" alt="jvvyou">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2023-02-23 00:00:00">2023年2月23日星期四</time></li>
-        
-          <li class="md-meta__item">
-            分类于
-            
-              <a href="../../category/sys/" class="md-meta__link">sys</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              需要 1 分钟阅读时间
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="supervisor"><a class="toclink" href="../../2023/02/23/supervisor%E5%90%AF%E5%8A%A8%E4%BA%A7%E7%94%9F%E5%A4%9A%E4%B8%AA%E8%BF%9B%E7%A8%8B/">supervisor启动产生多个进程</a></h2>
-<p>翌日线上es频繁报警，说某一时间段请求数量与前几日相比有上升，遂去服务器上查看请求，发现并没有什么特别大的量，然后对比入口网关的请求日志，一个reques id 出现了3次，如此有趣的事情必探查一番。</p>
-<p>发现一台机器上的filebeat启动了3个进程。。。导致一条日志上传了3次。filebeat是通过supervisor来进行管理，理论上不会有问题。</p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../2023/02/23/supervisor%E5%90%AF%E5%8A%A8%E4%BA%A7%E7%94%9F%E5%A4%9A%E4%B8%AA%E8%BF%9B%E7%A8%8B/">
           继续阅读
         </a>
       </nav>
