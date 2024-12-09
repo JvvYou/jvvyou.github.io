@@ -570,6 +570,15 @@
         <li class="md-nav__item">
   <a href="#istio" class="md-nav__link">
     <span class="md-ellipsis">
+      istio 安全 授权
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#istio" class="md-nav__link">
+    <span class="md-ellipsis">
       istio 安全 身份验证策略
     </span>
   </a>
@@ -643,15 +652,6 @@
   <a href="#k8s1302" class="md-nav__link">
     <span class="md-ellipsis">
       k8s1.30.2堆叠集群部署
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#frodo-sql" class="md-nav__link">
-    <span class="md-ellipsis">
-      frodo sql回放
     </span>
   </a>
   
@@ -1051,6 +1051,15 @@
         <li class="md-nav__item">
   <a href="#istio" class="md-nav__link">
     <span class="md-ellipsis">
+      istio 安全 授权
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#istio" class="md-nav__link">
+    <span class="md-ellipsis">
       istio 安全 身份验证策略
     </span>
   </a>
@@ -1129,15 +1138,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#frodo-sql" class="md-nav__link">
-    <span class="md-ellipsis">
-      frodo sql回放
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1152,6 +1152,53 @@
       <header class="md-typeset">
         <h1 id="2024">2024</h1>
       </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="../../img/person/index_logo.jpeg" alt="jvvyou">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2024-11-20 00:00:00">2024年11月20日星期三</time></li>
+        
+          <li class="md-meta__item">
+            分类于
+            
+              <a href="../../category/istio/" class="md-meta__link">istio</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              需要 2 分钟阅读时间
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="istio"><a class="toclink" href="../../2024/11/20/istio-%E5%AE%89%E5%85%A8-%E6%8E%88%E6%9D%83/">istio 安全 授权</a></h2>
+<p>&ensp;&ensp;Istio 的授权功能为网格中的工作负载提供网格范围、命名空间范围和工作负载范围的访问控制。</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2024/11/20/istio-%E5%AE%89%E5%85%A8-%E6%8E%88%E6%9D%83/">
+          继续阅读
+        </a>
+      </nav>
+    
+  </div>
+</article>
       
         <article class="md-post md-post--excerpt">
   <header class="md-post__header">
@@ -1278,7 +1325,7 @@
           
           <li class="md-meta__item">
             
-              需要 14 分钟阅读时间
+              需要 15 分钟阅读时间
             
           </li>
         
@@ -1290,10 +1337,10 @@
     <h2 id="istio-gateway"><a class="toclink" href="../../2024/10/30/istio-gateway-%E8%AF%95%E7%8E%A9/">istio gateway 试玩</a></h2>
 <p>&ensp;&ensp;Gateway描述在网格边缘运行的负载均衡器，用于接收传入或传出的 HTTP/TCP 连接。该规范描述了应公开的一组端口、要使用的协议类型、负载均衡器的 SNI 配置等。</p>
 <p>实验性功能不玩，例如Ingress Sidecar TLS 终止</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>k8s v1.30.2
-</span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>client version: 1.23.2
-</span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>control plane version: 1.23.2
-</span><span id="__span-35-4"><a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>data plane version: 1.23.2 (9 proxies)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>k8s v1.30.2
+</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>client version: 1.23.2
+</span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>control plane version: 1.23.2
+</span><span id="__span-38-4"><a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a>data plane version: 1.23.2 (9 proxies)
 </span></code></pre></div>
 
     
@@ -1380,7 +1427,7 @@
           
           <li class="md-meta__item">
             
-              需要 15 分钟阅读时间
+              需要 16 分钟阅读时间
             
           </li>
         
@@ -1390,9 +1437,6 @@
   </header>
   <div class="md-post__content md-typeset">
     <h2 id="istio-virtualservice"><a class="toclink" href="../../2024/10/15/istio-virtualservice-%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B/">istio VirtualService 配置示例</a></h2>
-<p>影响流量路由的配置。定义一组VirtualService在主机寻址时应用的流量路由规则。每个路由规则都定义特定协议流量的匹配标准。如果流量匹配，则将其发送到注册表中定义的命名目标服务（或其子集/版本）。</p>
-<p>流量来源也可以在路由规则中进行匹配。这样就可以针对特定客户端环境定制路由。</p>
-<p>刚开始可以自己试试,后面看看就行。</p>
 
     
       <nav class="md-post__action">
@@ -1585,53 +1629,6 @@
     
       <nav class="md-post__action">
         <a href="../../2024/07/31/k8s1.30.2%E5%A0%86%E5%8F%A0%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2/">
-          继续阅读
-        </a>
-      </nav>
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="../../img/person/index_logo.jpeg" alt="jvvyou">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-07-29 00:00:00">2024年7月29日星期一</time></li>
-        
-          <li class="md-meta__item">
-            分类于
-            
-              <a href="../../category/database/" class="md-meta__link">database</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              需要 1 分钟阅读时间
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="frodo-sql"><a class="toclink" href="../../2024/07/29/frodo%20sql%E5%9B%9E%E6%94%BE/">frodo sql回放</a></h2>
-<p>mysql 迁移，指定某一时间的审计日志进行回放。</p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../2024/07/29/frodo%20sql%E5%9B%9E%E6%94%BE/">
           继续阅读
         </a>
       </nav>
