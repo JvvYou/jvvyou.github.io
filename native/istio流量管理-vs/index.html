@@ -10,16 +10,16 @@
       
       
       
-        <link rel="canonical" href="https://jvvyou.github.io/blog/2024/10/15/istio-virtualservice-%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B/">
+        <link rel="canonical" href="https://jvvyou.github.io/native/istio%E6%B5%81%E9%87%8F%E7%AE%A1%E7%90%86-vs/">
       
       
-        <link rel="prev" href="../../../09/29/%E4%BB%8E%E5%B9%B2%E4%BA%866%E5%B9%B4%E7%9A%84%E5%85%AC%E5%8F%B8%E6%AF%95%E4%B8%9A/">
+        <link rel="prev" href="../../language/%E6%B5%81%E7%95%85%E7%9A%84python%E7%AC%94%E8%AE%B0/">
       
       
-        <link rel="next" href="../../23/istio-destinationrule/">
+        <link rel="next" href="../istio%E6%B5%81%E9%87%8F%E7%AE%A1%E7%90%86-dr/">
       
       
-      <link rel="icon" href="../../../../../assets/img/person/index_logo.jpeg">
+      <link rel="icon" href="../../assets/img/person/index_logo.jpeg">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
     
     
@@ -28,10 +28,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.3cba04c6.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,9 +50,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -75,7 +75,7 @@
       
         <meta  property="og:description"  content="istio VirtualService 配置示例" >
       
-        <meta  property="og:image"  content="https://jvvyou.github.io/assets/images/social/blog/posts/k8s/istio流量管理-vs.png" >
+        <meta  property="og:image"  content="https://jvvyou.github.io/assets/images/social/native/istio流量管理-vs.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -83,7 +83,7 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://jvvyou.github.io/blog/2024/10/15/istio-virtualservice-%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B/" >
+        <meta  property="og:url"  content="https://jvvyou.github.io/native/istio%E6%B5%81%E9%87%8F%E7%AE%A1%E7%90%86-vs/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
@@ -91,7 +91,7 @@
       
         <meta  name="twitter:description"  content="istio VirtualService 配置示例" >
       
-        <meta  name="twitter:image"  content="https://jvvyou.github.io/assets/images/social/blog/posts/k8s/istio流量管理-vs.png" >
+        <meta  name="twitter:image"  content="https://jvvyou.github.io/assets/images/social/native/istio流量管理-vs.png" >
       
     
     
@@ -101,7 +101,7 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6676480188236347"
      crossorigin="anonymous"></script>
 
-   <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -110,7 +110,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -143,9 +143,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../../../.." title="vv的小站" class="md-header__button md-logo" aria-label="vv的小站" data-md-component="logo">
+    <a href="../.." title="vv的小站" class="md-header__button md-logo" aria-label="vv的小站" data-md-component="logo">
       
-  <img src="../../../../../assets/img/person/index_logo.jpeg" alt="logo">
+  <img src="../../assets/img/person/index_logo.jpeg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -261,7 +261,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../.." class="md-tabs__link">
+        <a href="../.." class="md-tabs__link">
           
   
     
@@ -277,13 +277,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../blog/" class="md-tabs__link">
           
   
     
@@ -303,12 +301,34 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../note/%E6%B5%81%E7%95%85%E7%9A%84python%E7%AC%94%E8%AE%B0/" class="md-tabs__link">
+        <a href="../../language/%E6%B5%81%E7%95%85%E7%9A%84python%E7%AC%94%E8%AE%B0/" class="md-tabs__link">
           
   
     
   
-  笔记
+  语言
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+    
+  
+  云原生
 
         </a>
       </li>
@@ -327,9 +347,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -340,9 +358,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../.." title="vv的小站" class="md-nav__button md-logo" aria-label="vv的小站" data-md-component="logo">
+    <a href="../.." title="vv的小站" class="md-nav__button md-logo" aria-label="vv的小站" data-md-component="logo">
       
-  <img src="../../../../../assets/img/person/index_logo.jpeg" alt="logo">
+  <img src="../../assets/img/person/index_logo.jpeg" alt="logo">
 
     </a>
     vv的小站
@@ -378,7 +396,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../.." class="md-nav__link ">
+            <a href="../.." class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -410,8 +428,6 @@
       
   
   
-    
-  
   
   
     
@@ -428,22 +444,19 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../" class="md-nav__link ">
+            <a href="../../blog/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -454,13 +467,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             博客
@@ -522,7 +535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archive/2024/" class="md-nav__link">
+      <a href="../../blog/archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -545,7 +558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archive/2023/" class="md-nav__link">
+      <a href="../../blog/archive/2023/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -575,8 +588,6 @@
   
     
     
-      
-        
       
         
       
@@ -632,7 +643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../category/database/" class="md-nav__link">
+      <a href="../../blog/category/database/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -655,7 +666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../category/devops/" class="md-nav__link">
+      <a href="../../blog/category/devops/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -678,7 +689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../category/docker/" class="md-nav__link">
+      <a href="../../blog/category/docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -701,30 +712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../category/istio/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    istio
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/k8s/" class="md-nav__link">
+      <a href="../../blog/category/k8s/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -747,7 +735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../category/life/" class="md-nav__link">
+      <a href="../../blog/category/life/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -770,7 +758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../category/monitor/" class="md-nav__link">
+      <a href="../../blog/category/monitor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -793,7 +781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../category/sys/" class="md-nav__link">
+      <a href="../../blog/category/sys/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -850,7 +838,7 @@
             
   
   <span class="md-ellipsis">
-    笔记
+    语言
   </span>
   
 
@@ -860,7 +848,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            笔记
+            语言
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -871,11 +859,638 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../note/%E6%B5%81%E7%95%85%E7%9A%84python%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+      <a href="../../language/%E6%B5%81%E7%95%85%E7%9A%84python%E7%AC%94%E8%AE%B0/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     流畅的python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    云原生
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            云原生
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    istio VirtualService 配置示例
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    istio VirtualService 配置示例
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0" class="md-nav__link">
+    <span class="md-ellipsis">
+      0、概述
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0、概述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.1、主要字段
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.2、三种协议路由规则对比
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、基础环境
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1、基础环境">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11service-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1、service-a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12service-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2、service-b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3、配置注意点
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2virtualservice" class="md-nav__link">
+    <span class="md-ellipsis">
+      2、单一VirtualService
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2、单一VirtualService">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21uri404" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1、不同服务，uri404
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22uri" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2、不同服务，不同uri
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23urisvc" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3、不同服务，不同uri，不同svc端口
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24vsvs" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4、调用服务配置vs，被掉服务未配置vs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      3、vs配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3、vs配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31subset-hostshost" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1、subset hosts缺少一个host引发的问题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1、subset hosts缺少一个host引发的问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311vshostsservice-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.1、将上述vs中的hosts中删除service-b会出现什么效果？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312vshostsservice-bhttpnameservice-b-route" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.2、将上述vs中的hosts的service-b删除，http.name.service-b-route 也删掉
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32delegate" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2、Delegate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3、修改headers头
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34tls-tlsroute" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4、tls路由-TLSRoute
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35tcp-tcproute" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5、tcp路由-TCPRoute
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36http-httpmatchrequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6、http匹配请求-HTTPMatchRequest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37httproutedestination" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.7、HTTPRouteDestination
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#384-l4matchattributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.8、4层属性匹配-L4MatchAttributes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39tls-tlsmatchattributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.9、tls匹配属性-TLSMatchAttributes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310http-httpredirect" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.10、http重定向-HTTPRedirect
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311http-httpdirectresponse" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.11、http直接响应-HTTPDirectResponse
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312http-httprewrite" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.12、HTTP重写-HTTPRewrite
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313httprewrite-vs-httpredirect" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.13、HTTPRewrite vs HTTPRedirect
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314regexrewrite" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.14、RegexRewrite
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#315stringmatch" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.15、StringMatch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#316http-httpretry" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.16、http重试-HTTPRetry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#317-corspolicy" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.17、跨域-CorsPolicy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#318http-httpfaultinjection" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.18、http故障注入-HTTPFaultInjection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#319http-httpmirrorpolicy" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.19、HTTP镜像策略-HTTPMirrorPolicy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      4、vs的典型应用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4、vs的典型应用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1、多个服务的组合
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2、路由规则的优先级
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3、复杂条件路由
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../istio%E6%B5%81%E9%87%8F%E7%AE%A1%E7%90%86-dr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    istio DestinationRule
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../istio-gateway/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    istio gateway 试玩
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../istio-envoy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    istio envoy 访问外部服务
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../istio-%E5%AE%89%E5%85%A8%E6%8E%88%E6%9D%83/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    istio 安全 授权
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../istio-%E5%88%86%E5%B8%83%E5%BC%8F%E8%BF%BD%E8%B8%AA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    istio 分布式追踪
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../istio-%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    istio 安全 身份验证策略
   </span>
   
 
@@ -899,8 +1514,6 @@
               </div>
             
             
-              
-                
               
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
@@ -1305,100 +1918,10 @@
             
           
           
-  <div class="md-content md-content--post" data-md-component="content">
-    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
-      <div class="md-sidebar__scrollwrap">
-        <div class="md-sidebar__inner md-post">
-          <nav class="md-nav md-nav--primary">
-            <div class="md-post__back">
-              <div class="md-nav__title md-nav__container">
-                <a href="../../../../" class="md-nav__link">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-                  <span class="md-ellipsis">
-                    回到主页
-                  </span>
-                </a>
-              </div>
-            </div>
-            
-              <div class="md-post__authors md-typeset">
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
-                  <div class="md-profile md-post__profile">
-                    <span class="md-author md-author--long">
-                      <img src="../../../../img/person/index_logo.jpeg" alt="jvvyou">
-                    </span>
-                    <span class="md-profile__description">
-                      <strong>
-                        
-                          <a href="https://vvxx.js.cn">jvvyou</a>
-                        
-                      </strong>
-                      <br>
-                      享受生活
-                    </span>
-                  </div>
-                
-              </div>
-            
-            <ul class="md-post__meta md-nav__list">
-              <li class="md-nav__item md-nav__item--section">
-                <div class="md-post__title">
-                  <span class="md-ellipsis">
-                    元数据
-                  </span>
-                </div>
-                <nav class="md-nav">
-                  <ul class="md-nav__list">
-                    <li class="md-nav__item">
-                      <div class="md-nav__link">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2024-10-15 00:00:00" class="md-ellipsis">2024年10月15日星期二</time>
-                      </div>
-                    </li>
-                    
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 13h1.5v2.82l2.44 1.41-.75 1.3L15 16.69V13m4-5H5v11h4.67c-.43-.91-.67-1.93-.67-3a7 7 0 0 1 7-7c1.07 0 2.09.24 3 .67V8M5 21a2 2 0 0 1-2-2V5c0-1.11.89-2 2-2h1V1h2v2h8V1h2v2h1a2 2 0 0 1 2 2v6.1c1.24 1.26 2 2.99 2 4.9a7 7 0 0 1-7 7c-1.91 0-3.64-.76-4.9-2H5m11-9.85A4.85 4.85 0 0 0 11.15 16c0 2.68 2.17 4.85 4.85 4.85A4.85 4.85 0 0 0 20.85 16c0-2.68-2.17-4.85-4.85-4.85Z"/></svg>
-                          <time datetime="2024-11-30 00:00:00" class="md-ellipsis">2024年11月30日星期六</time>
-                        </div>
-                      </li>
-                    
-                    
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3H9m3 2 4 13 3-1-4-13-3 1M5 5v13h3V5H5M3 19v2h18v-2H3Z"/></svg>
-                          <span class="md-ellipsis">
-                            分类于
-                            
-                              <a href="../../../../category/istio/">istio</a></span>
-                        </div>
-                      </li>
-                    
-                    
-                      
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
-                          <span class="md-ellipsis">
-                            
-                              需要 16 分钟阅读时间
-                            
-                          </span>
-                        </div>
-                      </li>
-                    
-                  </ul>
-                </nav>
-              </li>
-            </ul>
-          </nav>
-          
-        </div>
-      </div>
-    </div>
-    <article class="md-content__inner md-typeset">
-      
-        <!--
+                  <!--
 Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1422,8 +1945,6 @@ IN THE SOFTWARE.
 
 <!-- Tags -->
 
-
-  
 
 <nav class="md-tags" >
   
@@ -1677,7 +2198,7 @@ vs描述了一个具体的服务对象，在该服务对象内包含了对流量
 </span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="s2">&quot;&quot;</span>
 </span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="o">{</span><span class="s2">&quot;detail&quot;</span>:<span class="s2">&quot;Not Found&quot;</span><span class="o">}</span>
 </span></code></pre></div>
-<a class="glightbox" href="../../../../img/20241016/1729093495930.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="请求v1" src="../../../../img/20241016/1729093495930.png" /></a></p>
+<a class="glightbox" href="../../blog/img/20241016/1729093495930.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="请求v1" src="../../blog/img/20241016/1729093495930.png" /></a></p>
 <p>结果不一样是因为此时service-a-svc和service-b两个destination处于负载均衡的状态：</p>
 <ul>
 <li>service-a-svc是调用service-b之前的操作是成功的，调用service-b是失败的，因为service-b uri 404。</li>
@@ -1715,7 +2236,7 @@ vs描述了一个具体的服务对象，在该服务对象内包含了对流量
 </span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="w">       </span><span class="nt">port</span><span class="p">:</span>
 </span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="w">         </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8000</span>
 </span></code></pre></div>
-<a class="glightbox" href="../../../../img/20241016/1729094817282.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="请求v2" src="../../../../img/20241016/1729094817282.png" /></a></p>
+<a class="glightbox" href="../../blog/img/20241016/1729094817282.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="请求v2" src="../../blog/img/20241016/1729094817282.png" /></a></p>
 </li>
 <li>
 <p>第一个curl，从测试pod到service-a，service-a到service-b</p>
@@ -1772,7 +2293,7 @@ vs描述了一个具体的服务对象，在该服务对象内包含了对流量
 </span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="s2">&quot;{\&quot;message\&quot;:\&quot;i am service b\&quot;}&quot;</span>
 </span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="s2">&quot;{\&quot;message\&quot;:\&quot;i am service b\&quot;}&quot;</span>
 </span></code></pre></div>
-<a class="glightbox" href="../../../../img/20241016/1729134523497.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="请求v3" src="../../../../img/20241016/1729134523497.png" /></a></p>
+<a class="glightbox" href="../../blog/img/20241016/1729134523497.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="请求v3" src="../../blog/img/20241016/1729134523497.png" /></a></p>
 <p>从v1改成了v2，就变成直接请求service-b，不经过service-a-svc了，从service-a-svc返回的数据经过requests的处理不一样。</p>
 <p>这个vs配置判断通过hosts和uri来分配目标服务。
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>$<span class="w"> </span><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="sb">`</span>seq<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">100</span><span class="sb">`</span><span class="p">;</span><span class="k">do</span><span class="w"> </span>curl<span class="w"> </span>http://service-a-svc:8000/api/v2/users/<span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;\n&quot;</span><span class="p">;</span><span class="k">done</span>
@@ -1783,7 +2304,7 @@ vs描述了一个具体的服务对象，在该服务对象内包含了对流量
 </span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="o">{</span><span class="s2">&quot;message&quot;</span>:<span class="s2">&quot;i am service b&quot;</span><span class="o">}</span>
 </span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="o">{</span><span class="s2">&quot;message&quot;</span>:<span class="s2">&quot;i am service b&quot;</span><span class="o">}</span>
 </span></code></pre></div>
-<a class="glightbox" href="../../../../img/20241016/1729134959010.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="请求v4" src="../../../../img/20241016/1729134959010.png" /></a></p>
+<a class="glightbox" href="../../blog/img/20241016/1729134959010.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="请求v4" src="../../blog/img/20241016/1729134959010.png" /></a></p>
 <h3 id="24vsvs">2.4、调用服务配置vs，被掉服务未配置vs</h3>
 <ul>
 <li>service-a-svc:8000</li>
@@ -1813,7 +2334,7 @@ vs描述了一个具体的服务对象，在该服务对象内包含了对流量
 </span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="s2">&quot;{\&quot;message\&quot;:\&quot;i am service b\&quot;}&quot;</span>
 </span></code></pre></div></li>
 </ul>
-<p><a class="glightbox" href="../../../../img/20241016/1729135500606.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="请求v5" src="../../../../img/20241016/1729135500606.png" /></a></p>
+<p><a class="glightbox" href="../../blog/img/20241016/1729135500606.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="请求v5" src="../../blog/img/20241016/1729135500606.png" /></a></p>
 <h2 id="3vs">3、vs配置</h2>
 <h3 id="31subset-hostshost">3.1、subset hosts缺少一个host引发的问题</h3>
 <p>两个服务的deployment, 区别就是service-b有v2的版本
@@ -1987,9 +2508,9 @@ service-a-svc配置：
 </span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="s2">&quot;{\&quot;message\&quot;:\&quot;i am service b\&quot;}&quot;</span>
 </span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="s2">&quot;{\&quot;message\&quot;:\&quot;i am service b\&quot;}&quot;</span>
 </span></code></pre></div>
-<a class="glightbox" href="../../../../img/20241016/1729151793350.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="vs-dr-subset" src="../../../../img/20241016/1729151793350.png" /></a></p>
+<a class="glightbox" href="../../blog/img/20241016/1729151793350.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="vs-dr-subset" src="../../blog/img/20241016/1729151793350.png" /></a></p>
 <h4 id="311vshostsservice-b">3.1.1、将上述vs中的hosts中删除service-b会出现什么效果？</h4>
-<p><a class="glightbox" href="../../../../img/20241016/1729152049541.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="vs-dr-subset-2" src="../../../../img/20241016/1729152049541.png" /></a></p>
+<p><a class="glightbox" href="../../blog/img/20241016/1729152049541.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="vs-dr-subset-2" src="../../blog/img/20241016/1729152049541.png" /></a></p>
 <p>what???怎么会出现这种情况？？？</p>
 <p><del>似乎应用了vs规则，经过测试，我给vs进行了故障注入,两个route分别注入,service-b-route并没有生效，service-a-routes生效了，所以虽然kiali中感觉vs生效了。所以还是走的svc，svc对应了两个deployment，发生了负载均衡。</del></p>
 <p>这个测试可能是有问题的，可以忽略，内部服务，没有配置mesh gateway vs应该是不会生效的。
@@ -2045,7 +2566,7 @@ service-a-svc配置：
 </span><span id="__span-17-16"><a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a><span class="w">        </span><span class="nt">subset</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 </span></code></pre></div>
 这样访问service-b时就是走的service，不经过vs。
-<a class="glightbox" href="../../../../img/20241016/1729176657479.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="vs-dr-subset-2" src="../../../../img/20241016/1729176657479.png" /></a></p>
+<a class="glightbox" href="../../blog/img/20241016/1729176657479.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="vs-dr-subset-2" src="../../blog/img/20241016/1729176657479.png" /></a></p>
 <h3 id="32delegate">3.2、Delegate</h3>
 <p>将请求委托给某个vs执行。有点像反向代理中的服务器组。
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">networking.istio.io/v1</span>
@@ -2102,7 +2623,7 @@ service-a-svc配置：
 </span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>
 </span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>http://myservice-a.com/api/v1/users/
 </span></code></pre></div>
-<a class="glightbox" href="../../../../img/20241016/1729236811974.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="vs-delegate" src="../../../../img/20241016/1729236811974.png" /></a></p>
+<a class="glightbox" href="../../blog/img/20241016/1729236811974.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="vs-delegate" src="../../blog/img/20241016/1729236811974.png" /></a></p>
 <h3 id="33headers">3.3、修改headers头</h3>
 <p>可以增加或者删除header头。</p>
 <p>给a服务增加一个返回header的接口。
@@ -2993,8 +3514,6 @@ SNI（Server Name Indication）是客户端在发起 TLS 连接时发送的主�
   
 
 
-  
-
 
 
 <!-- Comment system -->
@@ -3063,10 +3582,10 @@ SNI（Server Name Indication）是客户端在发起 TLS 连接时发送的主�
   <br/> 
 </div>
  -->
-      
-    </article>
-  </div>
-
+                
+              </article>
+            </div>
+          
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
@@ -3083,12 +3602,10 @@ SNI（Server Name Indication）是客户端在发起 TLS 连接时发送的主�
   
     
       
-        
-      
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../../../09/29/%E4%BB%8E%E5%B9%B2%E4%BA%866%E5%B9%B4%E7%9A%84%E5%85%AC%E5%8F%B8%E6%AF%95%E4%B8%9A/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 从干了6年的公司毕业">
+          <a href="../../language/%E6%B5%81%E7%95%85%E7%9A%84python%E7%AC%94%E8%AE%B0/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 流畅的python">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -3098,14 +3615,14 @@ SNI（Server Name Indication）是客户端在发起 TLS 连接时发送的主�
                 上一页
               </span>
               <div class="md-ellipsis">
-                从干了6年的公司毕业
+                流畅的python
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../23/istio-destinationrule/" class="md-footer__link md-footer__link--next" aria-label="下一页: istio DestinationRule">
+          <a href="../istio%E6%B5%81%E9%87%8F%E7%AE%A1%E7%90%86-dr/" class="md-footer__link md-footer__link--next" aria-label="下一页: istio DestinationRule">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
@@ -3160,10 +3677,10 @@ SNI（Server Name Indication）是客户端在发起 TLS 连接时发送的主�
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.path", "navigation.top", "navigation.indexes", "navigation.footer", "search.suggest", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.path", "navigation.top", "navigation.indexes", "navigation.footer", "search.suggest", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
